@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Giratorio</title>
+        <style>
+            body{
+                background-image: linear-gradient(#222, #333, #444);
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /*Le añadimos estilo al body*/
+            }
+            img{
+                position: absolute;
+                animation: rotation 5s infinite linear;
+                /*Establecemos la posicion y la rotacion de la imagen*/
+            }
+            @keyframes rotation {
+                    form{transform: rotateY(0deg);}
+                    to{transform: rotateY(359deg)}
+                    /*Creamos la rotacion*/
+                }
+            img::after{
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                bottom: -25px;
+                line-height: 1.5rem;
+                transform: rotateX(180deg);
+                color: transparent;
+                opacity: 0.5;
+                /*Creamos el espejo que se mostrara al girar*/
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Jose_LOGO.png"> 
+        <!--Aqui introducims nuestro logo-->
+    </body>
+</html>
